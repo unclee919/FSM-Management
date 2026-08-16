@@ -1,0 +1,158 @@
+{
+  "doctype": "DocType",
+  "name": "FSM Spare Part Request",
+  "module": "Elmrkz Fsm",
+  "autoname": "format:SPR-.YYYY.-.#####",
+  "title_field": "item_code",
+  "fields": [
+    {
+      "fieldname": "service_request",
+      "label": "Service Request",
+      "fieldtype": "Link",
+      "options": "Service Request",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "requested_by",
+      "label": "Requested By",
+      "fieldtype": "Link",
+      "options": "Technician Profile",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "request_type",
+      "label": "Request Type",
+      "fieldtype": "Select",
+      "options": "Purchase\nTransfer",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "item_code",
+      "label": "Item Code",
+      "fieldtype": "Link",
+      "options": "Item",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "item_name",
+      "label": "Item Name",
+      "fieldtype": "Data",
+      "read_only": 1
+    },
+    {
+      "fieldname": "qty",
+      "label": "Quantity",
+      "fieldtype": "Float",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "rate",
+      "label": "Internal Cost Rate",
+      "fieldtype": "Currency"
+    },
+    {
+      "fieldname": "from_technician",
+      "label": "From Technician",
+      "fieldtype": "Link",
+      "options": "Technician Profile"
+    },
+    {
+      "fieldname": "from_warehouse",
+      "label": "From Warehouse",
+      "fieldtype": "Link",
+      "options": "Warehouse"
+    },
+    {
+      "fieldname": "to_technician",
+      "label": "To Technician",
+      "fieldtype": "Link",
+      "options": "Technician Profile",
+      "reqd": 1
+    },
+    {
+      "fieldname": "to_warehouse",
+      "label": "To Warehouse",
+      "fieldtype": "Link",
+      "options": "Warehouse",
+      "read_only": 1
+    },
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "options": "Pending Approval\nApproved\nRejected\nCompleted",
+      "default": "Pending Approval",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "stock_entry",
+      "label": "Stock Entry",
+      "fieldtype": "Link",
+      "options": "Stock Entry",
+      "read_only": 1
+    },
+    {
+      "fieldname": "material_request",
+      "label": "Material Request",
+      "fieldtype": "Link",
+      "options": "Material Request",
+      "read_only": 1
+    },
+    {
+      "fieldname": "response_note",
+      "label": "Response Note",
+      "fieldtype": "Small Text"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "FSM Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0,
+      "cancel": 0,
+      "print": 1,
+      "email": 1,
+      "export": 1,
+      "report": 1,
+      "share": 1
+    },
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0,
+      "cancel": 0,
+      "print": 1,
+      "email": 1,
+      "export": 1,
+      "report": 1,
+      "share": 1
+    },
+    {
+      "role": "FSM Technician",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 0,
+      "submit": 0,
+      "cancel": 0,
+      "print": 0,
+      "email": 0,
+      "export": 0,
+      "report": 0,
+      "share": 0
+    }
+  ]
+}
+

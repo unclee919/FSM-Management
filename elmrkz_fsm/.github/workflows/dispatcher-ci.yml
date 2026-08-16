@@ -1,0 +1,56 @@
+name: Dispatcher CI
+
+on:
+  push:
+    paths:
+      - "frontend/dispatcher/**"
+      - ".github/workflows/dispatcher-ci.yml"
+  pull_request:
+    paths:
+      - "frontend/dispatcher/**"
+      - ".github/workflows/dispatcher-ci.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-and-package:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend/dispatcher
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: frontend/dispatcher/pnpm-lock.yaml
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11.21.0
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Validate recovered legacy inputs
+        run: pnpm run check
+
+      - name: Build Dispatcher artifact
+        run: pnpm run build
+
+      - name: Verify build integrity
+        run: pnpm run verify-build
+
+      - name: Upload Dispatcher artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: elmrkz-fsm-dispatcher
+          path: frontend/dispatcher/dist
+          if-no-files-found: error

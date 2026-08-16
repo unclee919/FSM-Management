@@ -1,0 +1,297 @@
+{
+ "doctype": "DocType",
+ "fields": [
+  {
+   "fieldname": "company_location",
+   "fieldtype": "Section Break",
+   "label": "Company Location"
+  },
+  {
+   "description": "Paste a Google Maps link to automatically extract coordinates.",
+   "fieldname": "google_maps_link",
+   "fieldtype": "Data",
+   "label": "Google Maps Link"
+  },
+  {
+   "fieldname": "fetch_location",
+   "fieldtype": "Button",
+   "label": "Fetch Current Location"
+  },
+  {
+   "fieldname": "company_latitude",
+   "fieldtype": "Float",
+   "label": "Company Latitude"
+  },
+  {
+   "fieldname": "company_longitude",
+   "fieldtype": "Float",
+   "label": "Company Longitude"
+  },
+  {
+   "fieldname": "map_preview",
+   "fieldtype": "HTML",
+   "label": "Map Preview"
+  },
+  {
+   "default": "25",
+   "fieldname": "company_radius_km",
+   "fieldtype": "Float",
+   "label": "Company Radius (km)"
+  },
+  {
+   "default": "200",
+   "description": "When an On the Way technician is within this distance of the customer GPS coordinates, the request changes automatically to Delivered.",
+   "fieldname": "arrival_radius_meters",
+   "fieldtype": "Float",
+   "label": "Arrival Radius (meters)"
+  },
+  {
+   "fieldname": "shift_settings",
+   "fieldtype": "Section Break",
+   "label": "Shift Settings"
+  },
+  {
+   "default": "08:00:00",
+   "fieldname": "default_shift_start_time",
+   "fieldtype": "Time",
+   "label": "Default Shift Start"
+  },
+  {
+   "default": "18:00:00",
+   "fieldname": "default_shift_end_time",
+   "fieldtype": "Time",
+   "label": "Default Shift End"
+  },
+  {
+   "default": "1",
+   "fieldname": "queue_off_shift_orders",
+   "fieldtype": "Check",
+   "label": "Queue Off-Shift Orders"
+  },
+  {
+   "fieldname": "assignment_criteria",
+   "fieldtype": "Table",
+   "label": "Assignment Criteria",
+   "options": "FSM Assignment Criterion"
+  },
+  {
+   "fieldname": "assignment_tuning",
+   "fieldtype": "Section Break",
+   "label": "Assignment Tuning"
+  },
+  {
+   "default": "50",
+   "description": "Distance at which the geographic-proximity score becomes zero.",
+   "fieldname": "proximity_score_distance_km",
+   "fieldtype": "Float",
+   "label": "Proximity Score Distance (km)"
+  },
+  {
+   "default": "10",
+   "description": "Open-request count at which the workload-balance score becomes zero.",
+   "fieldname": "maximum_open_requests_per_technician",
+   "fieldtype": "Int",
+   "label": "Maximum Open Requests per Technician"
+  },
+  {
+   "default": "20",
+   "description": "Distance at which the route-suitability score becomes zero.",
+   "fieldname": "route_suitability_distance_km",
+   "fieldtype": "Float",
+   "label": "Route Suitability Distance (km)"
+  },
+  {
+   "default": "30",
+   "description": "Number of days used to calculate the technician completion-rate score.",
+   "fieldname": "completion_rate_lookback_days",
+   "fieldtype": "Int",
+   "label": "Completion Rate Lookback (days)"
+  },
+  {
+   "default": "50",
+   "description": "Baseline used in scoring for a technician without requests in the completion-rate lookback period.",
+   "fieldname": "new_technician_completion_rate_percent",
+   "fieldtype": "Percent",
+   "label": "New Technician Completion Rate (%)"
+  },
+  {
+   "fieldname": "technician_approval_template",
+   "fieldtype": "Long Text",
+   "label": "Technician Approval Template"
+  },
+  {
+   "fieldname": "client_live_tracking_template",
+   "fieldtype": "Long Text",
+   "label": "Client Live Tracking Template"
+  },
+  {
+   "fieldname": "whatsapp_integration_section",
+   "fieldtype": "Section Break",
+   "label": "WhatsApp Chatbot & Sales Order Integration"
+  },
+  {
+   "default": "0",
+   "description": "Enable incoming WhatsApp chatbot order ingestion. When enabled, the service fee, company, and warehouse below are mandatory and validated before saving.",
+   "fieldname": "enable_whatsapp_order_ingestion",
+   "fieldtype": "Check",
+   "label": "Enable WhatsApp Order Ingestion"
+  },
+  {
+   "default": "0",
+   "description": "If checked, Sales Orders created via WhatsApp are submitted immediately (docstatus=1). If unchecked, they are created as Drafts (docstatus=0).",
+   "fieldname": "whatsapp_auto_submit_order",
+   "fieldtype": "Check",
+   "label": "Auto-Submit WhatsApp Sales Orders"
+  },
+  {
+   "default": "Lead",
+   "description": "Action when a WhatsApp number is not found in ERPNext Customer database.",
+   "fieldname": "whatsapp_unknown_contact_action",
+   "fieldtype": "Select",
+   "label": "Unknown Contact Action",
+   "options": "Lead\nCreate Customer\nReject"
+  },
+  {
+   "default": "FSM Service Visit",
+   "description": "Default Item used for a WhatsApp service-visit order when the incoming payload does not provide an item code.",
+   "fieldname": "whatsapp_default_item_code",
+   "fieldtype": "Link",
+   "label": "Default Service Item",
+   "options": "Item"
+  },
+  {
+   "default": "250",
+   "description": "Default service-visit fee applied when the incoming WhatsApp payload does not provide an item rate. Must be greater than zero when WhatsApp ingestion is enabled.",
+   "fieldname": "whatsapp_default_service_fee",
+   "fieldtype": "Currency",
+   "label": "Default Service Visit Fee"
+  },
+  {
+   "default": "Standard Selling",
+   "description": "Default Price List to apply for WhatsApp orders.",
+   "fieldname": "whatsapp_default_price_list",
+   "fieldtype": "Link",
+   "label": "Default Price List",
+   "options": "Price List"
+  },
+  {
+   "default": "Stores - E",
+   "description": "Default Warehouse for fulfillment of WhatsApp orders. It must be an enabled, non-group warehouse belonging to the configured company.",
+   "fieldname": "whatsapp_default_warehouse",
+   "fieldtype": "Link",
+   "label": "Default Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "default": "Elmrkz",
+   "description": "Default Company for WhatsApp Sales Orders. The selected warehouse must belong to this company.",
+   "fieldname": "whatsapp_default_company",
+   "fieldtype": "Link",
+   "label": "Default Company",
+   "options": "Company"
+  },
+  {
+   "default": "EGP",
+   "description": "Default Currency for WhatsApp Sales Orders.",
+   "fieldname": "whatsapp_default_currency",
+   "fieldtype": "Link",
+   "label": "Default Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "whatsapp_default_tax_template",
+   "fieldtype": "Link",
+   "label": "Default Taxes and Charges Template",
+   "options": "Sales Taxes and Charges Template"
+  },
+  {
+   "fieldname": "whatsapp_default_payment_terms",
+   "fieldtype": "Link",
+   "label": "Default Payment Terms Template",
+   "options": "Payment Terms Template"
+  },
+  {
+   "default": "confirm,yes,أكيد,تأكيد,موافق,تمام,order,test",
+   "description": "Comma-separated confirmation words accepted by the WhatsApp bridge after the LEAD_COMPLETION summary.",
+   "fieldname": "whatsapp_confirmation_keywords",
+   "fieldtype": "Small Text",
+   "label": "WhatsApp Confirmation Keywords"
+  },
+  {
+   "fieldname": "live_location_tracking",
+   "fieldtype": "Section Break",
+   "label": "Live Location Tracking"
+  },
+  {
+   "default": "1",
+   "description": "When enabled, active technicians send GPS updates while an active service request is assigned.",
+   "fieldname": "live_location_tracking_enabled",
+   "fieldtype": "Check",
+   "label": "Enable Background Location Tracking"
+  },
+  {
+   "default": "5",
+   "description": "How often active technicians send a background GPS update. Use a value from 1 to 60 minutes.",
+   "fieldname": "live_location_update_interval_minutes",
+   "fieldtype": "Int",
+   "label": "Location Update Interval (minutes)"
+  },
+  {
+   "default": "10",
+   "description": "An assigned request older than this without technician acceptance is flagged in the operations-health report.",
+   "fieldname": "technician_response_timeout_minutes",
+   "fieldtype": "Int",
+   "label": "Technician Response Timeout (minutes)"
+  },
+  {
+   "fieldname": "operations_monitoring",
+   "fieldtype": "Section Break",
+   "label": "Operations Monitoring"
+  },
+  {
+   "default": "25",
+   "description": "The queue depth at which the operations-health report marks a queue as requiring attention.",
+   "fieldname": "queue_backlog_warning_threshold",
+   "fieldtype": "Int",
+   "label": "Queue Backlog Warning Threshold"
+  },
+  {
+   "default": "15",
+   "description": "An active technician location ping older than this is flagged as stale in the operations-health report.",
+   "fieldname": "tracking_stale_after_minutes",
+   "fieldtype": "Int",
+   "label": "Tracking Stale After (minutes)"
+  }
+ ],
+ "icon": "settings",
+ "issingle": 1,
+ "module": "Elmrkz Fsm",
+ "name": "FSM Settings",
+ "permissions": [
+  {
+   "_assign": null,
+   "_comments": null,
+   "_liked_by": null,
+   "_user_tags": null,
+   "amend": 0,
+   "cancel": 0,
+   "create": 0,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "if_owner": 0,
+   "impersonate": 0,
+   "import": 0,
+   "mask": 0,
+   "permlevel": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "FSM Manager",
+   "select": 0,
+   "share": 1,
+   "submit": 0,
+   "write": 1
+  }
+ ]
+}

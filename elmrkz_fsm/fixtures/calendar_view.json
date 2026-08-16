@@ -1,0 +1,13 @@
+[
+ {
+  "all_day": 0,
+  "docstatus": 0,
+  "doctype": "Calendar View",
+  "end_date_field": "scheduled_datetime",
+  "modified": "2026-08-15 17:38:57.071030",
+  "name": "Service Request Calendar",
+  "reference_doctype": "Service Request",
+  "start_date_field": "scheduled_datetime",
+  "subject_field": "customer_name"
+ }
+]

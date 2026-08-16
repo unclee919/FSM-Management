@@ -1,0 +1,77 @@
+{
+ "app": "elmrkz_fsm",
+ "charts": [
+  {
+   "chart_name": "Service Requests by Status",
+   "label": "Service Requests by Status"
+  },
+  {
+   "chart_name": "Technician Workload",
+   "label": "Technician Workload"
+  }
+ ],
+ "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Field Service Management Overview\", \"level\": 2}}, {\"type\": \"chart\", \"data\": {\"chart_name\": \"Service Requests by Status\", \"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Key Metrics\", \"level\": 3}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Open Service Requests\", \"col\": 4}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Pending Spare Part Approvals\", \"col\": 4}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Completed Today\", \"col\": 4}}, {\"type\": \"chart\", \"data\": {\"chart_name\": \"Technician Workload\", \"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Quick Links\", \"level\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Service Calendar\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"New Service Request\", \"col\": 4}}]",
+ "creation": "2026-08-15 17:41:25.231720",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "icon": "dashboard",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "FSM Dashboard",
+ "link_type": "DocType",
+ "links": [],
+ "modified": "2026-08-15 18:27:54.458558",
+ "modified_by": "Administrator",
+ "module": "Elmrkz Fsm",
+ "name": "FSM Dashboard",
+ "number_cards": [
+  {
+   "label": "Open Service Requests",
+   "number_card_name": "Open Service Requests"
+  },
+  {
+   "label": "Pending Spare Part Approvals",
+   "number_card_name": "Pending Spare Part Approvals"
+  },
+  {
+   "label": "Completed Today",
+   "number_card_name": "Completed Today"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "FSM Management",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "FSM Manager"
+  }
+ ],
+ "sequence_id": 0.0,
+ "shortcuts": [
+  {
+   "color": "blue",
+   "doc_view": "Calendar",
+   "icon": "calendar",
+   "label": "Service Calendar",
+   "link_to": "Service Request",
+   "type": "DocType"
+  },
+  {
+   "color": "green",
+   "doc_view": "New",
+   "icon": "plus",
+   "label": "New Service Request",
+   "link_to": "Service Request",
+   "type": "DocType"
+  }
+ ],
+ "title": "FSM Dashboard",
+ "type": "Workspace"
+}

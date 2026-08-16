@@ -1,0 +1,50 @@
+{
+  "doctype": "DocType",
+  "name": "Service Request Item",
+  "module": "Elmrkz Fsm",
+  "istable": 1,
+  "fields": [
+    {
+      "fieldname": "item_code",
+      "label": "Item Code",
+      "fieldtype": "Link",
+      "options": "Item"
+    },
+    {
+      "fieldname": "item_name",
+      "label": "Item Name",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "description",
+      "label": "Description",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "device_name",
+      "label": "Device Name",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "failure_reason",
+      "label": "Failure Reason",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "brand",
+      "label": "Brand",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "initial_rate",
+      "label": "Initial Rate",
+      "fieldtype": "Currency"
+    },
+    {
+      "fieldname": "row_assigned_technician",
+      "label": "Assigned Technician",
+      "fieldtype": "Link",
+      "options": "Technician Profile"
+    }
+  ]
+}

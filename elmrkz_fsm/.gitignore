@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.log
+*.bak*
+*.orig
+*~
+.env
+.env.*
+frontend/dispatcher/node_modules/
+frontend/dispatcher/dist/
+# Dispatcher assets are reproducibly built from frontend/dispatcher and deployed into this runtime directory.
+public/

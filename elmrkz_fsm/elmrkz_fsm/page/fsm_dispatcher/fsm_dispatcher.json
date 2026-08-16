@@ -1,0 +1,7 @@
+{
+ "doctype": "Page",
+ "name": "fsm-dispatcher",
+ "title": "Dispatcher Console",
+ "module": "Elmrkz Fsm",
+ "standard": "Yes"
+}

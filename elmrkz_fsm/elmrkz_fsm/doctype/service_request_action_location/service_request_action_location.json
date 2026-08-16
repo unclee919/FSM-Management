@@ -1,0 +1,60 @@
+{
+  "doctype": "DocType",
+  "name": "Service Request Action Location",
+  "module": "Elmrkz Fsm",
+  "istable": 1,
+  "editable_grid": 1,
+  "fields": [
+    {
+      "fieldname": "action",
+      "label": "FSM Action",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "read_only": 1
+    },
+    {
+      "fieldname": "technician",
+      "label": "Technician",
+      "fieldtype": "Link",
+      "options": "Technician Profile",
+      "in_list_view": 1,
+      "read_only": 1
+    },
+    {
+      "fieldname": "latitude",
+      "label": "Latitude",
+      "fieldtype": "Float",
+      "in_list_view": 1,
+      "read_only": 1
+    },
+    {
+      "fieldname": "longitude",
+      "label": "Longitude",
+      "fieldtype": "Float",
+      "in_list_view": 1,
+      "read_only": 1
+    },
+    {
+      "fieldname": "timestamp",
+      "label": "Timestamp",
+      "fieldtype": "Datetime",
+      "in_list_view": 1,
+      "read_only": 1
+    },
+    {
+      "fieldname": "google_maps_link",
+      "label": "Google Maps Link",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "read_only": 1
+    },
+    {
+      "fieldname": "elapsed_minutes",
+      "label": "Minutes Since Previous Action",
+      "fieldtype": "Float",
+      "in_list_view": 1,
+      "read_only": 1
+    }
+  ],
+  "permissions": []
+}

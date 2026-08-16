@@ -1,0 +1,146 @@
+{
+ "doctype": "DocType",
+ "fields": [
+  {
+   "fieldname": "technician_name",
+   "fieldtype": "Data",
+   "label": "Technician Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "label": "User",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "description": "Warehouse assigned to this technician's service van for spare parts and stock movements.",
+   "fieldname": "van_warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Van Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "territory",
+   "fieldtype": "Link",
+   "label": "Territory",
+   "options": "Territory"
+  },
+  {
+   "description": "Payment mode used for customer collections by this technician. The linked Mode of Payment controls the ERPNext account.",
+   "fieldname": "mode_of_payment",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Mode of Payment",
+   "options": "Mode of Payment"
+  },
+  {
+   "default": "Available",
+   "fieldname": "availability_status",
+   "fieldtype": "Select",
+   "label": "Availability Status",
+   "options": "Available\nBusy\nOffline\nOn Leave"
+  },
+  {
+   "fieldname": "live_location",
+   "fieldtype": "Section Break",
+   "label": "Live Location"
+  },
+  {
+   "description": "The technician's latest location link. Paste a Google Maps link to extract coordinates.",
+   "fieldname": "google_maps_link",
+   "fieldtype": "Data",
+   "label": "Google Maps Link"
+  },
+  {
+   "description": "Managers can fetch the technician's current browser GPS position manually.",
+   "fieldname": "fetch_location",
+   "fieldtype": "Button",
+   "label": "Fetch Current Location"
+  },
+  {
+   "fieldname": "current_latitude",
+   "fieldtype": "Float",
+   "label": "Current Latitude"
+  },
+  {
+   "fieldname": "current_longitude",
+   "fieldtype": "Float",
+   "label": "Current Longitude"
+  },
+  {
+   "fieldname": "last_ping_time",
+   "fieldtype": "Datetime",
+   "label": "Last Ping Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "map_preview",
+   "fieldtype": "HTML",
+   "label": "Map Preview"
+  },
+  {
+   "fieldname": "skills",
+   "fieldtype": "Table",
+   "label": "Skills",
+   "options": "Technician Skill"
+  }
+ ],
+ "module": "Elmrkz Fsm",
+ "name": "Technician Profile",
+ "permissions": [
+  {
+   "_assign": null,
+   "_comments": null,
+   "_liked_by": null,
+   "_user_tags": null,
+   "amend": 0,
+   "cancel": 0,
+   "create": 0,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "if_owner": 0,
+   "impersonate": 0,
+   "import": 0,
+   "mask": 0,
+   "permlevel": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "FSM Technician",
+   "select": 0,
+   "share": 1,
+   "submit": 0,
+   "write": 1
+  },
+  {
+   "_assign": null,
+   "_comments": null,
+   "_liked_by": null,
+   "_user_tags": null,
+   "amend": 0,
+   "cancel": 0,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "if_owner": 0,
+   "impersonate": 0,
+   "import": 1,
+   "mask": 0,
+   "permlevel": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "FSM Manager",
+   "select": 0,
+   "share": 1,
+   "submit": 0,
+   "write": 1
+  }
+ ],
+ "title_field": "technician_name"
+}

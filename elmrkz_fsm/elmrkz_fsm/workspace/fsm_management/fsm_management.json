@@ -1,0 +1,105 @@
+{
+ "app": "elmrkz_fsm",
+ "charts": [],
+ "content": "[{\"id\":\"header_dispatcher\",\"type\":\"header\",\"data\":{\"text\":\"FSM Dispatcher Console\",\"level\":1,\"col\":12}},{\"id\":\"shortcut_dispatcher\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Dispatcher Console\",\"col\":4}},{\"id\":\"shortcut_service_requests\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Service Requests\",\"col\":4}},{\"id\":\"shortcut_operations_overview\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Operations Overview\",\"col\":4}},{\"id\":\"header_reporting\",\"type\":\"header\",\"data\":{\"text\":\"Management Reporting\",\"level\":2,\"col\":12}},{\"id\":\"shortcut_technician_performance\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Technician Performance\",\"col\":4}},{\"id\":\"shortcut_operations_health\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Operations Health\",\"col\":4}}]",
+ "creation": "2026-08-14 16:33:34.389290",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "FSM Management",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Service Requests",
+   "link_count": 0,
+   "link_to": "Service Request",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Technicians",
+   "link_count": 0,
+   "link_to": "Technician Profile",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "FSM Settings",
+   "link_count": 0,
+   "link_to": "FSM Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-08-16 01:09:41.398565",
+ "modified_by": "Administrator",
+ "module": "Elmrkz Fsm",
+ "name": "FSM Management",
+ "number_cards": [],
+ "owner": "Administrator",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "FSM Manager"
+  }
+ ],
+ "sequence_id": 0.0,
+ "shortcuts": [
+  {
+   "color": "Indigo",
+   "doc_view": "",
+   "icon": "dashboard",
+   "label": "Dispatcher Console",
+   "link_to": "fsm-dispatcher",
+   "type": "Page"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "icon": "list",
+   "label": "Service Requests",
+   "link_to": "Service Request",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "",
+   "icon": "dashboard",
+   "label": "Operations Overview",
+   "link_to": "FSM Operations Overview",
+   "type": "Report"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "",
+   "icon": "chart",
+   "label": "Technician Performance",
+   "link_to": "FSM Technician Performance",
+   "type": "Report"
+  },
+  {
+   "color": "Red",
+   "doc_view": "",
+   "icon": "dashboard",
+   "label": "Operations Health",
+   "link_to": "FSM Operations Health",
+   "type": "Report"
+  }
+ ],
+ "title": "FSM Management",
+ "type": "Workspace"
+}

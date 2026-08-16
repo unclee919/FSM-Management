@@ -1,0 +1,83 @@
+{
+  "doctype": "DocType",
+  "name": "Service Request Part",
+  "module": "Elmrkz Fsm",
+  "istable": 1,
+  "fields": [
+    {
+      "fieldname": "item_code",
+      "label": "Item Code",
+      "fieldtype": "Link",
+      "options": "Item"
+    },
+    {
+      "fieldname": "item_name",
+      "label": "Item Name",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "qty",
+      "label": "Qty",
+      "fieldtype": "Float"
+    },
+    {
+      "fieldname": "rate",
+      "label": "Internal Cost Rate",
+      "fieldtype": "Currency",
+      "read_only": 1,
+      "description": "Purchase or internal transfer cost. It is not the customer selling price."
+    },
+    {
+      "fieldname": "amount",
+      "label": "Internal Cost Amount",
+      "fieldtype": "Currency",
+      "read_only": 1
+    },
+    {
+      "fieldname": "selling_rate",
+      "label": "Selling Rate",
+      "fieldtype": "Currency",
+      "description": "Customer-facing rate used on the Sales Invoice."
+    },
+    {
+      "fieldname": "selling_amount",
+      "label": "Selling Amount",
+      "fieldtype": "Currency",
+      "read_only": 1
+    },
+    {
+      "fieldname": "warehouse",
+      "label": "Warehouse",
+      "fieldtype": "Link",
+      "options": "Warehouse"
+    },
+    {
+      "fieldname": "source_type",
+      "label": "Source",
+      "fieldtype": "Select",
+      "options": "Purchase\nTransfer\nAdditional Sale",
+      "default": "Purchase"
+    },
+    {
+      "fieldname": "stock_entry",
+      "label": "Stock Entry",
+      "fieldtype": "Link",
+      "options": "Stock Entry",
+      "read_only": 1
+    },
+    {
+      "fieldname": "transfer_request",
+      "label": "Transfer Request",
+      "fieldtype": "Link",
+      "options": "FSM Spare Part Request",
+      "read_only": 1
+    },
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "options": "Requested\nPending Approval\nApproved\nRejected\nCompleted",
+      "default": "Requested"
+    }
+  ]
+}

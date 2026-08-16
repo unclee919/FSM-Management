@@ -1,0 +1,142 @@
+[
+ {
+  "app": "elmrkz_fsm",
+  "charts": [],
+  "content": "[{\"id\": \"header_1\", \"type\": \"header\", \"data\": {\"text\": \"FSM Technical\", \"level\": 1, \"col\": 12}}, {\"id\": \"card_1\", \"type\": \"card\", \"data\": {\"card_name\": \"Service Requests\", \"col\": 6}}, {\"id\": \"shortcut_1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"FSM Settings\", \"col\": 6}}]",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "external_link": null,
+  "for_user": null,
+  "hide_custom": 0,
+  "icon": null,
+  "indicator_color": "green",
+  "is_hidden": 0,
+  "label": "FSM Technical",
+  "link_to": null,
+  "link_type": "DocType",
+  "links": [
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "My Service Requests",
+    "link_count": 0,
+    "link_to": "Service Request",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   }
+  ],
+  "modified": "2026-08-14 18:38:47.268862",
+  "module": "Elmrkz Fsm",
+  "name": "FSM Technical",
+  "number_cards": [],
+  "parent_page": null,
+  "public": 1,
+  "quick_lists": [],
+  "restrict_to_domain": null,
+  "roles": [
+   {
+    "role": "FSM Technician"
+   }
+  ],
+  "sequence_id": 0.0,
+  "shortcuts": [],
+  "title": "FSM Technical",
+  "type": "Workspace"
+ },
+ {
+  "app": "elmrkz_fsm",
+  "charts": [
+   {
+    "chart_name": "Service Requests by Status",
+    "label": "Service Requests by Status"
+   },
+   {
+    "chart_name": "Technician Workload",
+    "label": "Technician Workload"
+   }
+  ],
+  "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Field Service Management Overview\", \"level\": 2}}, {\"type\": \"chart\", \"data\": {\"chart_name\": \"Service Requests by Status\", \"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Key Metrics\", \"level\": 3}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Open Service Requests\", \"col\": 4}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Pending Spare Part Approvals\", \"col\": 4}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Completed Today\", \"col\": 4}}, {\"type\": \"chart\", \"data\": {\"chart_name\": \"Technician Workload\", \"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Quick Links\", \"level\": 4}}]",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "external_link": null,
+  "for_user": null,
+  "hide_custom": 0,
+  "icon": "dashboard",
+  "indicator_color": "green",
+  "is_hidden": 0,
+  "label": "FSM Dashboard",
+  "link_to": null,
+  "link_type": "DocType",
+  "links": [],
+  "modified": "2026-08-15 18:23:04.287382",
+  "module": "Elmrkz Fsm",
+  "name": "FSM Dashboard",
+  "number_cards": [
+   {
+    "label": "Open Service Requests",
+    "number_card_name": "Open Service Requests"
+   },
+   {
+    "label": "Pending Spare Part Approvals",
+    "number_card_name": "Pending Spare Part Approvals"
+   },
+   {
+    "label": "Completed Today",
+    "number_card_name": "Completed Today"
+   }
+  ],
+  "parent_page": "FSM Management",
+  "public": 1,
+  "quick_lists": [],
+  "restrict_to_domain": null,
+  "roles": [
+   {
+    "role": "System Manager"
+   },
+   {
+    "role": "FSM Manager"
+   }
+  ],
+  "sequence_id": 0.0,
+  "shortcuts": [
+   {
+    "color": "blue",
+    "doc_view": "Calendar",
+    "format": null,
+    "icon": "calendar",
+    "kanban_board": null,
+    "label": "Service Calendar",
+    "link_to": "Service Request",
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "DocType",
+    "url": null
+   },
+   {
+    "color": "green",
+    "doc_view": "New",
+    "format": null,
+    "icon": "plus",
+    "kanban_board": null,
+    "label": "New Service Request",
+    "link_to": "Service Request",
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "DocType",
+    "url": null
+   }
+  ],
+  "title": "FSM Dashboard",
+  "type": "Workspace"
+ }
+]
