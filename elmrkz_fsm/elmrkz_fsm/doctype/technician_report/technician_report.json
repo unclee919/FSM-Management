@@ -1,0 +1,137 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-08-16 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "service_request",
+  "technician",
+  "customer",
+  "column_break_1",
+  "posting_date",
+  "status",
+  "section_break_details",
+  "work_performed",
+  "parts_used_summary",
+  "recommendations",
+  "section_break_sign",
+  "customer_signature",
+  "technician_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "service_request",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Service Request",
+   "options": "Service Request",
+   "reqd": 1
+  },
+  {
+   "fieldname": "technician",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Technician",
+   "options": "Technician Profile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Posting Date",
+   "reqd": 1
+  },
+  {
+   "default": "Submitted",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nSubmitted\nApproved"
+  },
+  {
+   "fieldname": "section_break_details",
+   "fieldtype": "Section Break",
+   "label": "Work & Findings"
+  },
+  {
+   "fieldname": "work_performed",
+   "fieldtype": "Text Editor",
+   "label": "Work Performed / Diagnosis",
+   "reqd": 1
+  },
+  {
+   "fieldname": "parts_used_summary",
+   "fieldtype": "Small Text",
+   "label": "Parts Used Summary"
+  },
+  {
+   "fieldname": "recommendations",
+   "fieldtype": "Small Text",
+   "label": "Recommendations"
+  },
+  {
+   "fieldname": "section_break_sign",
+   "fieldtype": "Section Break",
+   "label": "Sign-off & Notes"
+  },
+  {
+   "fieldname": "customer_signature",
+   "fieldtype": "Signature",
+   "label": "Customer Signature"
+  },
+  {
+   "fieldname": "technician_notes",
+   "fieldtype": "Small Text",
+   "label": "Internal Technician Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-08-16 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Elmrkz FSM",
+ "name": "Technician Report",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Field Service Technician",
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

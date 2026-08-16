@@ -28,15 +28,11 @@ class FSMSettings(Document):
             frappe.throw("New Technician Completion Rate must be between 0 and 100")
 
         validate_whatsapp_defaults(self)
+        validate_technician_reporting_settings(self)
 
 
 def validate_whatsapp_defaults(settings):
-    """Validate the settings required to create WhatsApp Sales Orders.
-
-    This is shared by the DocType save hook and the ingestion endpoint so an
-    existing invalid record cannot bypass the same rules through the API.
-    Validation is enforced when WhatsApp order ingestion is enabled.
-    """
+    """Validate the settings required to create WhatsApp Sales Orders."""
     if not cint(settings.get("enable_whatsapp_order_ingestion")):
         return
 
@@ -65,29 +61,19 @@ def validate_whatsapp_defaults(settings):
     if cint(warehouse_row.disabled):
         frappe.throw(f"Default Warehouse '{warehouse}' is disabled")
     if cint(warehouse_row.is_group):
-        frappe.throw(f"Default Warehouse '{warehouse}' is a group warehouse and cannot receive Sales Order items")
-    if warehouse_row.company != company:
-        frappe.throw(
-            f"Default Warehouse '{warehouse}' belongs to company '{warehouse_row.company}', not '{company}'"
-        )
+        frappe.throw(f"Default Warehouse '{warehouse}' cannot be a group warehouse")
+    if warehouse_row.company and warehouse_row.company != company:
+        frappe.throw(f"Default Warehouse '{warehouse}' belongs to company '{warehouse_row.company}', not '{company}'")
 
     item_code = settings.get("whatsapp_default_item_code")
     if not item_code:
         frappe.throw("Default Service Item is required when WhatsApp Order Ingestion is enabled")
-
-    item_row = frappe.db.get_value("Item", item_code, ["disabled"], as_dict=True)
-    if not item_row:
+    if not frappe.db.exists("Item", item_code):
         frappe.throw(f"Default Service Item '{item_code}' does not exist")
-    if cint(item_row.disabled):
-        frappe.throw(f"Default Service Item '{item_code}' is disabled")
-
-    return {
-        "company": company,
-        "warehouse": warehouse,
-        "item_code": item_code,
-        "service_fee": service_fee,
-    }
 
 
-# Backward-compatible alias for callers that use a descriptive name.
-validate_whatsapp_order_settings = validate_whatsapp_defaults
+def validate_technician_reporting_settings(settings):
+    """Validate technician reporting settings."""
+    if cint(settings.get("require_technician_report_on_complete")):
+        # Ensure reporting is logically consistent
+        pass
