@@ -1,0 +1,63 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "creation": "2026-08-17 12:00:00.000000",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "message_id",
+        "sender",
+        "timestamp",
+        "message_type",
+        "content"
+    ],
+    "fields": [
+        {
+            "fieldname": "message_id",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Message ID"
+        },
+        {
+            "default": "Customer",
+            "fieldname": "sender",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Sender",
+            "options": "Customer\nBot\nAgent"
+        },
+        {
+            "fieldname": "timestamp",
+            "fieldtype": "Datetime",
+            "in_list_view": 1,
+            "label": "Timestamp"
+        },
+        {
+            "default": "Text",
+            "fieldname": "message_type",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Message Type",
+            "options": "Text\nImage\nLocation\nAudio\nVideo"
+        },
+        {
+            "fieldname": "content",
+            "fieldtype": "Small Text",
+            "in_list_view": 1,
+            "label": "Content"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "is_child_table": 1,
+    "links": [],
+    "modified": "2026-08-17 12:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Elmrkz Fsm",
+    "name": "WhatsApp Message Item",
+    "owner": "Administrator",
+    "permissions": [],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": []
+}

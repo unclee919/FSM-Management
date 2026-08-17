@@ -1,0 +1,116 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "creation": "2026-08-17 12:00:00.000000",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "chat_id",
+        "customer_name",
+        "phone_number",
+        "status",
+        "session_state",
+        "column_break_1",
+        "last_message_time",
+        "sales_order",
+        "service_request",
+        "section_break_messages",
+        "messages"
+    ],
+    "fields": [
+        {
+            "fieldname": "chat_id",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Chat ID",
+            "reqd": 1,
+            "unique": 1
+        },
+        {
+            "fieldname": "customer_name",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Customer Name"
+        },
+        {
+            "fieldname": "phone_number",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Phone Number"
+        },
+        {
+            "default": "Open",
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Status",
+            "options": "Open\nConverted\nClosed\nPending"
+        },
+        {
+            "default": "Collecting Details",
+            "fieldname": "session_state",
+            "fieldtype": "Data",
+            "label": "Session State"
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "last_message_time",
+            "fieldtype": "Datetime",
+            "in_list_view": 1,
+            "label": "Last Message Time"
+        },
+        {
+            "fieldname": "sales_order",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Sales Order",
+            "options": "Sales Order"
+        },
+        {
+            "fieldname": "service_request",
+            "fieldtype": "Link",
+            "label": "Service Request",
+            "options": "Service Request"
+        },
+        {
+            "fieldname": "section_break_messages",
+            "fieldtype": "Section Break",
+            "label": "Conversation Items"
+        },
+        {
+            "fieldname": "messages",
+            "fieldtype": "Table",
+            "label": "Messages",
+            "options": "WhatsApp Message Item"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2026-08-17 12:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Elmrkz Fsm",
+    "name": "WhatsApp Conversation Log",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": [],
+    "track_changes": 1
+}
